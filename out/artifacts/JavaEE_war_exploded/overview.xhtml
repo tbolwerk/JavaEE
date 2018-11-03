@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head><title>FletNix</title>
+    <link rel="stylesheet" href="style/style.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous"/>
+    <meta name="description" content="FletNix online video streaming service"/>
+    <meta name="keywords" content="FletNix,NetFlix,Video,Streaming"/>
+    <meta name="author" content="Twan Bolwerk"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</h:head>
+<h:body>
+    <div class="header">
+        <div class="topnav" id="myTopnav">
+            <a href="index.index_old.xhtml">Home</a>
+            <a href="#new">New</a>
+            <a href="overview.xhtml" class="active">Overview</a>
+            <a href="#populair">Populair</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <div class="usernav">
+            <a href="#"><span><i class="fas fa-user"></i>Sign Up</span></a>
+            <a href="#"><span><i class="fas fa-sign-in-alt"></i>Login</span></a>
+
+        </div>
+
+
+    </div>
+    <div class="content">
+        <ui:repeat value="#{controller.movies}" var="movie">
+
+
+            <div class="info-box" onclick="window.location='movieservlet?movie_id=#{movie.movie_id}'">
+                <h:graphicImage url="img/posters/#{movie.cover_image}"/>
+                <div class="hidden-info-box">
+                    <h1>#{movie.title}</h1>
+                    <p>#{movie.description}</p>
+                </div>
+            </div>
+
+        </ui:repeat>
+
+
+
+
+
+
+    </div>
+
+
+</h:body>
+<script type="text/javascript">
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+
+
+</script>
+</html>

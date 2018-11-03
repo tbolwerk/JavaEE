@@ -1,0 +1,735 @@
+.spotPadding {
+    padding: 10px 0; }
+
+.spotHeader {
+    height: auto;
+    padding-top: 80px;
+    display: flex;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    position: relative;
+    overflow-x: hidden; }
+
+.spotBg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-size: cover;
+    background-position: center; }
+
+.spotBg div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, black 60%, black 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, black 60%, black 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, black 60%, black 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=1 );
+    /* IE6-9 */ }
+
+.spotInfo {
+    width: 50%;
+    max-width: 680px;
+    padding: 160px 40px;
+    z-index: 1; }
+
+.spotDetails {
+    color: #fff; }
+
+.spotDetails h2 {
+    font-size: 38px;
+    font-weight: bold;
+    display: inline;
+    overflow-wrap: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto; }
+
+.spotDetails span {
+    font-size: 16px;
+    margin-left: 5px; }
+
+.spotRating span {
+    font-style: italic; }
+
+.spotDetails p {
+    font-size: 16px; }
+
+.spotRating {
+    padding: 5px 0; }
+
+.spotRating i {
+    font-size: 24px;
+    color: #fff; }
+
+.spotRating i.checked {
+    color: #ff7080; }
+
+.spotCast p {
+    padding: 2.5px 0; }
+
+.spotButtons {
+    flex-basis: 100%;
+    display: flex;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */ }
+
+.spotButton:nth-last-child(1) {
+    margin: 0; }
+
+.spotButton {
+    display: flex;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    font-weight: bold;
+    white-space: nowrap;
+    margin-right: 20px;
+    }
+
+.spotButtonTrailer {
+    position: relative;
+
+}
+
+
+
+.spotButton, .spotButton span, .spotPlay a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff; }
+
+.spotButton i {
+    margin: auto 0 auto 5px; }
+
+.spotButton input {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    cursor: pointer; }
+
+.spotButton input + label {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: 0.3s background-color ease-in-out; }
+
+.spotButton input:hover + label {
+    background-color: rgba(0, 0, 0, 0.2); }
+
+.spotButton input:checked {
+    position: fixed;
+    z-index: 3; }
+
+.spotButton input:checked + label, .spotButton input:checked ~ .spotBoxTrailer {
+    opacity: 1;
+    visibility: visible; }
+
+.spotBoxTrailer {
+    width: calc(100% - 160px);
+    height: calc(100% - 160px);
+    position: fixed;
+    top: 80px;
+    left: 80px;
+    z-index: 4; }
+
+.spotTrailer {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.95); }
+
+.spotTrailer iframe {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%; }
+
+.errorTrailer {
+    margin: auto;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left; }
+
+.spotPlay {
+    display: flex;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    -webkit-box-flex: 1;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: 1;
+    /* OLD - Firefox 19- */
+    -webkit-flex: 1;
+    /* Chrome */
+    -ms-flex: 1;
+    /* IE 10 */
+    flex: 1;
+    flex-direction: column;
+    z-index: 1; }
+
+.spotPlay a {
+    margin: auto;
+    padding: 10px 40px;
+    display: flex;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */ }
+
+.spotPlay i {
+    margin: auto 5px auto 0; }
+
+.homeMain {
+    height: auto !important;
+    /* real browsers */
+    height: 100%;
+    /* IE6: treaded as min-height*/
+    background-color: #181818; }
+
+.colThumb {
+    flex-direction: column;
+    padding-top: 40px; }
+
+.colThumbHeader {
+    padding: 0 80px; }
+
+.colThumbHeader span {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff; }
+
+.colThumbHeader p {
+    max-width: 800px;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: normal;
+    color: #fff; }
+
+.colThumbContent {
+    padding: 20px 50px 40px 0;
+    display: flex;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    overflow-x: auto; }
+
+.colThumbContent::-webkit-scrollbar {
+    height: 12px;
+    background-color: #181818; }
+
+.colThumbContent::-webkit-scrollbar-track {
+    -webkit-box-shadow: none; }
+
+.colThumbContent::-webkit-scrollbar-thumb {
+    background-color: #202020;
+    outline: 1px solid slategrey; }
+
+.colThumbContent > div {
+    min-width: calc(100% / 6.25);
+    background-size: cover;
+    background-position: center;
+    border-right: 20px solid #181818; }
+
+.colThumbContent > div:first-of-type {
+    margin-left: 80px; }
+
+.colThumbContent > div > a {
+    display: block;
+    padding-bottom: 148.1%;
+    position: relative; }
+
+.thumbInfo {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    padding: 20px;
+    display: flex;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    align-items: flex-end;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.75), #000);
+    cursor: pointer;
+    transition: visibility 0.2s linear, opacity 0.2s ease-in-out; }
+
+.colThumbContent > div:hover .thumbInfo {
+    opacity: 1;
+    visibility: visible; }
+
+.thumbInfo::before {
+    content: '';
+    position: absolute;
+    top: calc(50% - 15px);
+    left: calc(50% - 10px);
+    border-style: solid;
+    border-width: 15px 0 15px 25px;
+    border-color: transparent transparent transparent white; }
+
+.thumbInfo::after {
+    display: none;
+    content: '';
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    position: absolute;
+    top: calc(50% - 26px);
+    left: calc(50% - 26px);
+    border: 1px solid #ec567c; }
+
+.thumbInfo h2 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff; }
+
+.colGenre {
+    padding: 80px; }
+
+.colGenre .colThumbHeader {
+    padding: 40px 10px 20px 10px; }
+
+.colGenre .colThumbContent {
+    padding: 0;
+    justify-content: none;
+    flex-wrap: wrap;
+    align-content: flex-start; }
+
+.colGenre .colThumbContent > div {
+    min-width: calc(100% / 6);
+    border: 10px solid #181818;
+    margin: 0; }
+
+.account {
+    padding: 80px 40px;
+    flex: 1; }
+
+.accountContainer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; }
+
+.accountHeader {
+    padding: 20px 0 40px 0; }
+
+.accountHeader h1 {
+    font-size: 46px;
+    font-weight: 800;
+    color: #FFFFFF;
+    text-align: center; }
+
+.editInfo {
+    padding: 40px; }
+
+.editPoster {
+    width: 50%;
+    max-width: 400px;
+    margin: auto;
+    display: block; }
+
+.editPoster > div {
+    width: 100%;
+    padding-bottom: 148.1%;
+    position: relative; }
+
+.editPoster > div > div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-size: cover;
+    background-position: center; }
+
+.editForm label {
+    padding-bottom: 5px;
+    display: inline-block;
+    font-size: 16px;
+    color: #fff; }
+
+@media screen and (min-width: 1000px) {
+    .colThumbFlexbox .colThumbHeader {
+        padding: 0 40px; }
+
+    .colThumbFlexbox .colThumbContent {
+        padding: 20px 40px 40px 40px;
+        justify-content: space-around; }
+
+    .colThumbFlexbox .colThumbContent > div:first-of-type {
+        margin: 0 10px 0 0; }
+
+    .colThumbFlexbox .colThumbContent > div:last-of-type {
+        margin: 0 0 0 10px; }
+
+    .colThumbFlexbox .colThumbContent > div {
+        min-width: 0;
+        -webkit-box-flex: 1;
+        /* OLD - iOS 6-, Safari 3.1-6 */
+        -moz-box-flex: 1;
+        /* OLD - Firefox 19- */
+        -webkit-flex: 1;
+        /* Chrome */
+        -ms-flex: 1;
+        /* IE 10 */
+        flex: 1;
+        border-width: 0;
+        margin: 0 10px; } }
+@media screen and (max-width: 1000px) {
+    .colThumbHeader {
+        padding: 0 20px; }
+
+    .colThumbContent {
+        padding-right: 20px; }
+
+    .colThumbContent::-webkit-scrollbar {
+        height: 10px; }
+
+    .colThumbContent > div {
+        min-width: calc(100% / 4.1);
+        border-right-width: 20px; }
+
+    .colThumbContent > div:first-of-type {
+        margin-left: 20px; }
+
+    .thumbInfo h2 {
+        font-size: 14px; }
+
+    .colGenre {
+        padding: 80px 10px 20px 10px; }
+
+    .colGenre .colThumbHeader {
+        padding: 20px 10px; }
+
+    .colGenre .colThumbContent > div:first-of-type {
+        margin-left: 0; }
+
+    .colGenre .colThumbContent > div {
+        min-width: calc(100% / 4); } }
+@media screen and (max-width: 800px) {
+    .spotHeader {
+        flex-direction: column; }
+
+    .spotPlay {
+        margin: 0 auto;
+        padding: 80px 0; }
+
+    .spotPlay a {
+        padding: 10px 40px;
+        font-size: 16px; }
+
+    .spotBg div {
+        background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6), #000); }
+
+    .spotInfo {
+        width: 100%;
+        max-width: none;
+        padding: 20px; }
+
+    .spotDetails p, .spotCast {
+        display: none; }
+
+    .spotButtons {
+        padding: 20px 0 0 0; }
+
+    .spotPadding {
+        padding: 5px 0; }
+
+    .spotDetails h2 {
+        font-size: 36px; }
+
+    .spotDetails p, .spotCast p {
+        font-size: 12px; }
+
+    .spotCast, .spotDetails p {
+        display: block; }
+
+    .thumbInfo h2 {
+        font-size: 12px; } }
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700");
+html, body {
+    margin: 0;
+    min-height: 100%;
+    background: #141414; }
+
+html {
+    height: 100%; }
+
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    z-index: -2; }
+
+body::-webkit-scrollbar {
+    width: 12px;
+    background-color: #141414; }
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: none; }
+
+body::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    outline: 1px solid slategrey; }
+
+h1, h2, h3, h4, h5, h6, a, span, p, td, li, input, label, textarea {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "Montserrat", Arial, sans-serif; }
+
+a {
+    text-decoration: none; }
+
+* {
+    box-sizing: border-box; }
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+
+.dFlex {
+    display: flex;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */ }
+
+input, select, textarea {
+    width: 100%;
+    display: block;
+    padding: 15px;
+    width: 100%;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    background-color: #ffffff30;
+    border: none;
+    resize: vertical; }
+
+input:disabled {
+    color: #7d7d7d;
+    background-color: #7b7b7b30; }
+
+select {
+    background-color: #ffffff30;
+    color: #fff; }
+
+option {
+    color: #000; }
+
+input::-webkit-input-placeholder {
+    color: #707070; }
+
+input.error, select.error {
+    border: 2px solid #B9090B; }
+
+.containerMarge {
+    margin-bottom: 20px; }
+
+.containerMarge .errorInput, .containerMarge .succesInput {
+    margin-top: 5px;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left; }
+
+.containerMarge .errorInput {
+    color: #B9090B; }
+
+.containerMarge .succesInput {
+    color: #4BB543; }
+
+.containerMarge h2 {
+    padding-top: 20px;
+    font-size: 24px;
+    font-weight: 800;
+    color: #FFFFFF;
+    text-align: center; }
+
+.containerMulti > * {
+    margin-left: 20px; }
+
+.containerMulti > *:first-of-type {
+    margin-left: 0px; }
+
+.arrowUp {
+    width: 0;
+    height: 0;
+    border-left: 7.5px solid transparent;
+    border-right: 7.5px solid transparent;
+    border-bottom: 7.5px solid; }
+
+.arrowDown {
+    width: 0;
+    height: 0;
+    border-left: 7.5px solid transparent;
+    border-right: 7.5px solid transparent;
+    border-top: 7.5px solid; }
+
+.arrowRight {
+    width: 0;
+    height: 0;
+    border-top: 7.5px solid transparent;
+    border-bottom: 7.5px solid transparent;
+    border-left: 7.5px solid; }
+
+.arrowLeft {
+    width: 0;
+    height: 0;
+    border-top: 7.5px solid transparent;
+    border-bottom: 7.5px solid transparent;
+    border-right: 7.5px solid; }
+
+.flexAlignLeft {
+    margin-right: auto; }
+
+.flexAlignRight {
+    margin-left: auto; }
+
+.boxHidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0.2s linear, opacity 0.2s ease-in-out; }
+
+.buttonTrans {
+    padding: 10px 40px!important;
+    color: white;
+    background-color: rgba(238, 238, 238, 0);
+    border: 1px solid rgba(238, 238, 238, 0.25);
+    cursor: pointer;
+    transition: 0.3s all; }
+
+.buttonTrans > span {
+    transition: 0.3s all; }
+
+.buttonTrans:hover {
+    color: black;
+    background-color: rgba(238, 238, 238, 0.5);
+    border: 1px solid rgba(238, 238, 238, 0.5); }
+
+.buttonTrans:hover > span {
+    color: black; }
+
+.buttonDark {
+    padding: 10px 40px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(238, 238, 238, 0.25);
+    cursor: pointer;
+    transition: 0.3s all; }
+
+.buttonDark:hover {
+    color: black;
+    background-color: rgba(238, 238, 238, 0.5);
+    border: 1px solid rgba(238, 238, 238, 0.5); }
+
+.buttonPurple:hover {
+    color: white;
+    background-color: #ec567c; }
+
+@media screen and (max-width: 800px) {
+    .footerLinks ul {
+        flex-direction: column; } }
+
+/*# sourceMappingURL=style.css.map */
+@media screen and (max-width: 600px) {
+    .spotHeader {
+        padding-top: 50px; }
+
+    .spotButton, .spotButton span, .spotPlay a {
+        font-size: 12px; }
+
+    .spotRating i {
+        font-size: 18px; }
+
+    .colThumbHeader span {
+        font-size: 24px; }
+
+    .colThumbContent > div {
+        min-width: calc(100% / 2.1); }
+
+    .colGenre .colThumbContent > div {
+        min-width: calc(100% / 2); } }
+@media screen and (max-width: 400px) {
+    .spotButton {
+        padding: 10px 0;
+        justify-content: center;
+        -webkit-box-flex: 1;
+        /* OLD - iOS 6-, Safari 3.1-6 */
+        -moz-box-flex: 1;
+        /* OLD - Firefox 19- */
+        -webkit-flex: 1;
+        /* Chrome */
+        -ms-flex: 1;
+        /* IE 10 */
+        flex: 1; } }
+
+/*# sourceMappingURL=components.css.map */

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head><title>FletNix</title>
+   <link rel="stylesheet" href="style/style.css"/>
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous"/>
+   <link rel="stylesheet" href="style/search_overlay.css"/>
+   <meta name="description" content="FletNix online video streaming service"/>
+   <meta name="keywords" content="FletNix,NetFlix,Video,Streaming"/>
+   <meta name="author" content="Twan Bolwerk"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</h:head>
+<h:body>
+   <div class="header">
+      <div class="topnav" id="myTopnav">
+         <a href="index.index_old.xhtml" class="active">Home</a>
+         <a href="#new">New</a>
+         <a href="overviewservlet">Overview</a>
+         <a href="#populair">Populair</a>
+         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+         </a>
+      </div>
+         <div class="usernav">
+            <a href="#"><span><i class="fas fa-user"></i>Sign Up</span></a>
+            <a href="#"><span><i class="fas fa-sign-in-alt"></i>Login</span></a>
+
+      </div>
+
+
+
+
+   </div>
+   <div id="search_overlay" class="search_overlay">
+      <form class="search_overlay-form" action="">
+         <input class="search_overlay-input" type="search" placeholder="Search..." onkeyup="searchInfo()"/>
+
+      </form>
+      <div class="search_overlay-content">
+         <div class="dummy-column">
+            <h2>People</h2>
+            <a class="dummy-media-object" href="http://twitter.com/SaraSoueidan">
+               <img class="round" src="http://0.gravatar.com/avatar/81b58502541f9445253f30497e53c280?s=50&amp;d=identicon&amp;r=G" alt="Sara Soueidan"/>
+               <h3>Sara Soueidan</h3>
+            </a>
+            <a class="dummy-media-object" href="http://twitter.com/rachsmithtweets">
+               <img class="round" src="http://0.gravatar.com/avatar/48959f453dffdb6236f4b33eb8e9f4b7?s=50&amp;d=identicon&amp;r=G" alt="Rachel Smith"/>
+               <h3>Rachel Smith</h3>
+            </a>
+            <a class="dummy-media-object" href="http://www.twitter.com/peterfinlan">
+               <img class="round" src="http://0.gravatar.com/avatar/06458359cb9e370d7c15bf6329e5facb?s=50&amp;d=identicon&amp;r=G" alt="Peter Finlan"/>
+               <h3>Peter Finlan</h3>
+            </a>
+            <a class="dummy-media-object" href="http://www.twitter.com/pcridesagain">
+               <img class="round" src="http://1.gravatar.com/avatar/db7700c89ae12f7d98827642b30c879f?s=50&amp;d=identicon&amp;r=G" alt="Patrick Cox"/>
+               <h3>Patrick Cox</h3>
+            </a>
+            <a class="dummy-media-object" href="https://twitter.com/twholman">
+               <img class="round" src="http://0.gravatar.com/avatar/cb947f0ebdde8d0f973741b366a51ed6?s=50&amp;d=identicon&amp;r=G" alt="Tim Holman"/>
+               <h3>Tim Holman</h3>
+            </a>
+            <a class="dummy-media-object" href="https://twitter.com/shaund0na">
+               <img class="round" src="http://1.gravatar.com/avatar/9bc7250110c667cd35c0826059b81b75?s=50&amp;d=identicon&amp;r=G" alt="Shaun Dona"/>
+               <h3>Shaun Dona</h3>
+            </a>
+         </div>
+         <div class="dummy-column">
+            <h2>Popular</h2>
+            <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/08/05/page-preloading-effect/">
+               <img src="img/thumbs/PagePreloadingEffect.png" alt="PagePreloadingEffect"/>
+               <h3>Page Preloading Effect</h3>
+            </a>
+            <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/05/28/arrow-navigation-styles/">
+               <img src="img/thumbs/ArrowNavigationStyles.png" alt="ArrowNavigationStyles"/>
+               <h3>Arrow Navigation Styles</h3>
+            </a>
+            <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/06/19/ideas-for-subtle-hover-effects/">
+               <img src="img/thumbs/HoverEffectsIdeasNew.png" alt="HoverEffectsIdeasNew"/>
+               <h3>Ideas for Subtle Hover Effects</h3>
+            </a>
+            <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/07/14/freebie-halcyon-days-one-page-website-template/">
+               <img src="img/thumbs/FreebieHalcyonDays.png" alt="FreebieHalcyonDays"/>
+               <h3>Halcyon Days Template</h3>
+            </a>
+            <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/05/22/inspiration-for-article-intro-effects/">
+               <img src="img/thumbs/ArticleIntroEffects.png" alt="ArticleIntroEffects"/>
+               <h3>Inspiration for Article Intro Effects</h3>
+            </a>
+            <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/06/26/draggable-dual-view-slideshow/">
+               <img src="img/thumbs/DraggableDualViewSlideshow.png" alt="DraggableDualViewSlideshow"/>
+               <h3>Draggable Dual-View Slideshow</h3>
+            </a>
+         </div>
+         <div class="dummy-column">
+            <h2>Recent</h2>
+            <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/10/07/tooltip-styles-inspiration/">
+               <img src="img/thumbs/TooltipStylesInspiration.png" alt="TooltipStylesInspiration"/>
+               <h3>Tooltip Styles Inspiration</h3>
+            </a>
+            <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/09/23/animated-background-headers/">
+               <img src="img/thumbs/AnimatedHeaderBackgrounds.png" alt="AnimatedHeaderBackgrounds"/>
+               <h3>Animated Background Headers</h3>
+            </a>
+            <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/09/16/off-canvas-menu-effects/">
+               <img src="img/thumbs/OffCanvas.png" alt="OffCanvas"/>
+               <h3>Off-Canvas Menu Effects</h3>
+            </a>
+            <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/09/02/tab-styles-inspiration/">
+               <img src="img/thumbs/TabStyles.png" alt="TabStyles"/>
+               <h3>Tab Styles Inspiration</h3>
+            </a>
+            <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/">
+               <img src="img/thumbs/ResponsiveSVGs.png" alt="ResponsiveSVGs"/>
+               <h3>Make SVGs Responsive with CSS</h3>
+            </a>
+            <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/07/23/notification-styles-inspiration/">
+               <img src="img/thumbs/NotificationStyles.png" alt="NotificationStyles"/>
+               <h3>Notification Styles Inspiration</h3>
+            </a>
+         </div>
+      </div><!-- /morphsearch-content -->
+      <span class="search_overlay-close"></span>
+   </div><!-- /morphsearch -->
+   <div class="content">
+      <ui:repeat value="#{controller.movies}" var="movie">
+
+
+         <div class="info-box" onclick="window.location='movieservlet?movie_id=#{movie.movie_id}'">
+            <h:graphicImage url="img/posters/#{movie.cover_image}"/>
+            <div class="hidden-info-box">
+            <h1>#{movie.title}</h1>
+            <p>#{movie.description}</p>
+            </div>
+         </div>
+
+      </ui:repeat>
+
+
+
+
+
+
+   </div>
+
+
+</h:body>
+
+<script src="js/classie.js" type="text/javascript"/>
+<script src="js/responsive.js" type="text/javascript"/>
+<script src="js/search_overlay.js" type="text/javascript"/>
+
+
+</html>
