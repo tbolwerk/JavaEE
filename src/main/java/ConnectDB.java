@@ -7,9 +7,9 @@ import java.sql.SQLException;
 
 public class ConnectDB {
     private static Connection conn = null;
-    private static String dbURL = "jdbc:sqlserver://192.168.85.19:1433;databaseName=FletNix";
-    private static String user = "database";
-    private static String pass = "Bolwerk22!";
+    private static String dbURL = "jdbc:sqlserver://ip:1433;databaseName=FletNix";
+    private static String user = "";
+    private static String pass = "";
     public Connection getConnection() throws SQLException {
         Connection connection = null;
         DriverManager.registerDriver(new com.microsoft.sqlserver.jdbc.SQLServerDriver());
